@@ -14,5 +14,19 @@
 | state | 对象存储支持复杂类型（保留原有类型） | 存放一些用户不可见参数          |
 | query | 只支持string类型                     | url中回显方便多人直接且保存使用 |
 
+## 使用
+首先安装 `fancy-history`
+```
+    yarn add fancy-history
+
+    npm install fancy-history
+```
+
+在umi2.x环境，修改`.umirc.js` Or `config.js`
+```js
+    config.resolve.alias.set('history', 'fancy-history');
+```
+
+
 ## 当前版本
 对应 `history` v4
