@@ -9,10 +9,27 @@
 `query` 用于查询参数
 
 ###  优缺点
-| 类型  | 优点                                 | 缺点                            |
-| ----- | ------------------------------------ |
-| state | 对象存储支持复杂类型（保留原有类型） | 存放一些用户不可见参数          |
-| query | 只支持string类型                     | url中回显方便多人直接且保存使用 |
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>state</td>
+<td>对象存储支持复杂类型（保留原有类型）</td>
+<td>存放一些用户不可见参数</td>
+</tr>
+<tr>
+<td>query</td>
+<td>只支持string类型</td>
+<td>url中回显方便多人直接且保存使用</td>
+</tr>
+</body>
+</table>
 
 ## 使用
 首先安装 `fancy-history`
