@@ -17,19 +17,29 @@ import valueEqual from 'value-equal';
 import { parsePath } from './PathUtils';
 import querystring from 'query-string';
 
+
 const getQuery = search => {
-  let { _ = '{}', ...query } = search ? querystring.parse(search) : {};
+  let query = search ? _queryString2.default.parse(search) : {};
+  let _ = {};
   try {
-    _ = JSON.parse(_);
-  } catch (e) {}
+    _ = JSON.parse(query['_']);
+  } catch (e) {
+  } finally {
+    delete query['_'];
+  }
 
   return _extends(_, query);
 };
 
 const getSearch = query => {
   if (query) {
-    return querystring.stringify({
-      '-': JSON.stringify(query)
+    let otherQuery = query;
+    if (query['_']) {
+      otherQuery = _extends({}, query['_'], otherQuery);
+      delete query['_'];
+    }
+    return _queryString2.default.stringify({
+      _: JSON.stringify(otherQuery)
     });
   }
   return '';
@@ -37,7 +47,7 @@ const getSearch = query => {
 
 export var createLocation = function createLocation(path, state, key, currentLocation) {
   var location = void 0;
-  console.log(path);
+
   if (typeof path === 'string') {
     // Two-arg form: push(path, state)
     location = parsePath(path);
