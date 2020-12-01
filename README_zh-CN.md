@@ -34,9 +34,9 @@
 ## Usage
 首先安装 `fancy-history`
 ```
-    yarn add fancy-history
+yarn add fancy-history
 
-    npm install fancy-history
+npm install fancy-history
 ```
 
 在umi2.x环境，修改`.umirc.js` Or `config.js`

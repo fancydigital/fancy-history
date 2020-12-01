@@ -67,7 +67,6 @@ var createLocation = (exports.createLocation = function createLocation(
   currentLocation
 ) {
   var location = void 0;
-  console.log(path);
   if (typeof path === 'string') {
     // Two-arg form: push(path, state)
     location = (0, _PathUtils.parsePath)(path);

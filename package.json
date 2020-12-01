@@ -1,6 +1,6 @@
 {
   "name": "fancy-history",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Manage session history with JavaScript",
   "repository": "git@github.com:fancydigital/fancy-history.git",
   "license": "MIT",
