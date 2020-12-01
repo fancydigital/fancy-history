@@ -32,10 +32,10 @@
 }
 ```
 ## Q&A
-Q：为什么配置 `.umirc.js` alias无效？
+Q：为什么配置 `.umirc.js` alias无效？   
 A：因为`history`为内置会覆盖别名，按照umi配置优先级 umi<内置config<chainWebpack。所以需要配置chainWebpack中再次覆盖内置别名
    
-Q：配置也写到chainWebpack中，fancy-history也安装，还是没有生效？
+Q：配置也写到chainWebpack中，fancy-history也安装，还是没有生效？   
 A：由于umi会生成dll，需要保证umi-dlls有更新才能生效，可以删除node_modules/umi-dlls 重新生成即可生效
 
 ## 当前版本
