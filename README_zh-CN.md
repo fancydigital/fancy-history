@@ -8,7 +8,7 @@
 
 `query` 用于查询参数
 
-###  优缺点
+###  Difference
 <table>
 <thead>
 <tr>
@@ -31,7 +31,7 @@
 </body>
 </table>
 
-## 使用
+## Usage
 首先安装 `fancy-history`
 ```
     yarn add fancy-history
@@ -50,10 +50,10 @@
 ```
 ## Q&A
 Q：为什么配置 `.umirc.js` alias无效？   
-A：因为`history`为内置会覆盖别名，按照umi配置优先级 umi<内置config<chainWebpack。所以需要配置chainWebpack中再次覆盖内置别名
+A：因为`history`为内置会覆盖别名，按照umi配置优先级 chainWebpack>内置config>umi 。所以需要配置chainWebpack中再次覆盖内置别名
    
 Q：配置也写到chainWebpack中，fancy-history也安装，还是没有生效？   
 A：由于umi会生成dll，需要保证umi-dlls有更新才能生效，可以删除node_modules/umi-dlls 重新生成即可生效
 
-## 当前版本
-对应 `history` v4
+## Version
+fork `history` v4
