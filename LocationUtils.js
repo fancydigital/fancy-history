@@ -54,9 +54,11 @@ const getSearch = query => {
       otherQuery = _extends({}, query['_'], otherQuery);
       delete query['_'];
     }
-    return _queryString2.default.stringify({
-      _: JSON.stringify(otherQuery)
-    });
+    if(Object.keys(otherQuery).length !== 0){
+      return _queryString2.default.stringify({
+        _: JSON.stringify(otherQuery)
+      });
+    }
   }
   return '';
 };

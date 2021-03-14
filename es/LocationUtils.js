@@ -19,7 +19,7 @@ import querystring from 'query-string';
 
 
 const getQuery = search => {
-  let query = search ? _queryString2.default.parse(search) : {};
+  let query = search ? querystring.parse(search) : {};
   let _ = {};
   try {
     _ = JSON.parse(query['_']);
@@ -38,9 +38,12 @@ const getSearch = query => {
       otherQuery = _extends({}, query['_'], otherQuery);
       delete query['_'];
     }
-    return _queryString2.default.stringify({
-      _: JSON.stringify(otherQuery)
-    });
+    // Do not return empty objects
+    if(Object.keys(otherQuery).length !== 0){
+      return querystring.stringify({
+        _: JSON.stringify(otherQuery)
+      });
+    }
   }
   return '';
 };

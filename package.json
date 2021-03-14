@@ -1,6 +1,6 @@
 {
   "name": "fancy-history",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "description": "Manage session history with JavaScript",
   "repository": "git@github.com:fancydigital/fancy-history.git",
   "license": "MIT",
@@ -62,6 +62,7 @@
     "mocha": "^3.0.2",
     "pretty-bytes": "^4.0.2",
     "readline-sync": "^1.4.4",
+    "rimraf": "^3.0.2",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },

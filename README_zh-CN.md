@@ -57,3 +57,6 @@ A：由于umi会生成dll，需要保证umi-dlls有更新才能生效，可以�
 
 ## Version
 fork `history` v4
+
+## ⚠️warning⚠️
+目前构建脚本未完成

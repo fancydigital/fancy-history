@@ -1,0 +1,9 @@
+.awcache
+.github
+.idea
+coverage
+examples
+webpack
+test
+*.lock
+.vscode
